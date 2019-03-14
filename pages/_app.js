@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import auth0 from "../services/auth0";
 import { ToastContainer } from "react-toastify";
 import Fonts from "../helpers/Fonts";
+import "../styles/shared/nprogress.css";
 
 const MyApp = props => {
   const { Component, pageProps, auth, router } = props;

@@ -13,6 +13,20 @@ import {
 } from "reactstrap";
 import auth0 from "../../services/auth0";
 import ActiveLink from "../ActiveLink";
+import Router from "next/router";
+import NProgress from "nprogress";
+
+Router.onRouteChangeStart = () => {
+  NProgress.start();
+};
+
+Router.onRouteChangeComplete = () => {
+  NProgress.done();
+};
+
+Router.onRouteChangeError = () => {
+  NProgress.done();
+};
 
 const BsNavLink = props => {
   const { route, title, router, className } = props;
